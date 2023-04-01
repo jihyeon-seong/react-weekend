@@ -96,19 +96,19 @@ scoop --version
 
 Scoop의 명령어 목록 보기
 
-```shell
+```bash
 scoop help
 ```
 
 install 명령어에 대한 정보 보기
 
-```shell
+```bash
 scoop help install
 ```
 
 설치된 앱 목록 보기
 
-```shell
+```bash
 scoop list
 ```
 
@@ -116,7 +116,7 @@ scoop list
 
 temurin 앱 검색
 
-```shell
+```bash
 scoop search temurin
 ```
 
@@ -124,13 +124,13 @@ scoop search temurin
 
 설치된 버킷 목록을 확인하기
 
-```shell
+```bash
 scoop bucket list
 ```
 
 java 버킷 추가하기
 
-```shell
+```bash
 scoop bucket add java
 ```
 
@@ -138,19 +138,19 @@ scoop bucket add java
 
 java 버킷 삭제하기
 
-```shell
+```bash
 scoop bucket rm java
 ```
 
 스쿱과 스쿱에서 설치한 앱을 최신 버전으로 업데이트하기
 
-```shell
+```bash
 scoop update
 ```
 
 ## Git 설치하기
 
-```shell
+```bash
 scoop install git
 ```
 
@@ -158,7 +158,7 @@ scoop install git
 
 설치된 Git 버전 확인하기
 
-```shell
+```bash
 git --version
 ```
 
@@ -166,19 +166,19 @@ git --version
 
 Node.js 검색
 
-```shell
+```bash
 scoop search nodejs
 ```
 
 nodejs-lts ([LTS](https://ko.wikipedia.org/wiki/%EC%9E%A5%EA%B8%B0_%EC%A7%80%EC%9B%90_%EB%B2%84%EC%A0%84) : Long Term Support, 장기 지원 버전)으로 설치한다.
 
-```shell
+```bash
 scoop install nodejs-lts
 ```
 
 설치된 node의 버전을 확인하기
 
-```shell
+```bash
 node --version
 ```
 
@@ -193,7 +193,7 @@ Get-Command npm
 
 npm 버전 확인
 
-```shell
+```bash
 npm --version
 ```
 
@@ -211,7 +211,7 @@ Get-Command yarn
 
 Node [Corepack](https://nodejs.org/api/corepack.html#corepack) 활성화 하기
 
-```shell
+```bash
 corepack enable
 ```
 
@@ -221,25 +221,25 @@ corepack enable
 
 npm 명령어 확인하기
 
-```shell
+```bash
 npm --help
 ```
 
 설치된 노드 패키지 목록 보기
 
-```shell
+```bash
 npm ll
 ```
 
 글로벌로 설치한 노드 패키지 목록 보기
 
-```shell
+```bash
 npm ll -g
 ```
 
 ## npm으로 [typescript](https://www.typescriptlang.org/ko/docs/)와 [ts-node](https://typestrong.org/ts-node/)(타입스크립트 실행환경) 설치하기
 
-```shell
+```bash
 npm install -g typescript ts-node
 ```
 
@@ -247,7 +247,7 @@ npm install -g typescript ts-node
 
 설치된 타입스크립트의 버전 확인하기
 
-```shell
+```bash
 tsc --version
 ```
 
@@ -255,7 +255,7 @@ tsc --version
 
 ts-node 버전 확인하기
 
-```shell
+```bash
 ts-node --version
 ```
 
@@ -311,7 +311,7 @@ console.log('안녕하세요');
 
 터미널에서 ex01.js를 실행하기
 
-```shell
+```bash
 cd .\lab01\
 node .\ex01.js
 ```
