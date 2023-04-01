@@ -86,9 +86,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 6.  backup(E:) > react-weekend > Applications > Scoop > apps 아래에 scoop 이 설치된 것을 확인한다.
 
-## Scoop 명령어
-
-[Scoop Commands](https://github.com/ScoopInstaller/Scoop/wiki/Commands)
+## [Scoop 명령어](https://github.com/ScoopInstaller/Scoop/wiki/Commands)
 
 설치된 Scoop의 버전 확인하기
 
@@ -287,7 +285,7 @@ react-weekend > Applications 아래에 vs code를 설치한다.
 
 - Vs Code 확장 검색창에서 [Prettier](https://prettier.io/)(Code Formatter)를 검색해서 설치한다.
 
-- Vs Code 설정 메뉴에서 formatter 검색
+- Vs Code 설정 메뉴에서 **formatter** 검색
 
 - **Default Formatter** 를 Prettier로 설정
 
@@ -320,7 +318,10 @@ node .\ex01.js
 
 ## Javascript
 
-- [Javascript 수업 내용은 lab01 폴더 아래의 js 파일들을 확인하세요.](https://github.com/jihyeon-seong/react-weekend/tree/main/Labs/lab01)
+- Javascript 수업 내용은 lab01 폴더 아래의 js 파일들을 확인하세요.
+  - [let, const, 문자열 템플릿, 비교 연산자 ==와 ===의 차이점](https://github.com/jihyeon-seong/react-weekend/blob/main/Labs/lab01/ex01.js)
+  - [if...else, 삼항연산자, switch, for, for...in, for...of, while, do...while, 반복문에서 break와 continue](https://github.com/jihyeon-seong/react-weekend/blob/main/Labs/lab01/ex02.js)
+  - [Functions](https://github.com/jihyeon-seong/react-weekend/blob/main/Labs/lab01/ex03.js)
 
 ### 더 알아볼만한 내용
 
