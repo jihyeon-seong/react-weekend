@@ -2,8 +2,6 @@
 
 ## 요약
 
----
-
 - 학습 환경 구성
   - Windows Package Manager인 **Scoop**을 이용해 **Node.js**와 **Git**을 설치
   - **Visual Studio Code** 설치
@@ -14,8 +12,6 @@
     - 조건문 (if...else, switch)
     - 반복문 (for, for...in, for...of, while, do..while)
   - function (함수 표현식, 익명 함수, 화살표 함수 표현식)
-
----
 
 ## [React](https://ko.reactjs.org/)
 
@@ -44,8 +40,6 @@ _학원 컴퓨터는 Windows라 Scoop을 사용해서 node 설치 진행_
 학원 컴퓨터 backup(E 드라이브)에 '**react-weekend**'로 폴더를 생성해서 수업 관련 프로그램, 파일은 모두 이 안에 생성한다.
 
 ## Scoop 설치하기
-
----
 
 1.  PowerShell을 실행한다.
 
@@ -93,8 +87,6 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 6.  backup(E:) > react-weekend > Applications > Scoop > apps 아래에 scoop 이 설치된 것을 확인한다.
 
 ## Scoop 명령어
-
----
 
 [Scoop Commands](https://github.com/ScoopInstaller/Scoop/wiki/Commands)
 
@@ -160,8 +152,6 @@ scoop update
 
 ## Git 설치하기
 
----
-
 ```shell
 scoop install git
 ```
@@ -175,8 +165,6 @@ git --version
 ```
 
 ## Node.js 설치하기
-
----
 
 Node.js 검색
 
@@ -213,8 +201,6 @@ npm --version
 
 ## yarn 활성화하기
 
----
-
 yarn 명령어 위치 찾기
 
 ```powershell
@@ -235,8 +221,6 @@ corepack enable
 
 ## npm 명령어
 
----
-
 npm 명령어 확인하기
 
 ```shell
@@ -256,8 +240,6 @@ npm ll -g
 ```
 
 ## npm으로 [typescript](https://www.typescriptlang.org/ko/docs/)와 [ts-node](https://typestrong.org/ts-node/)(타입스크립트 실행환경) 설치하기
-
----
 
 ```shell
 npm install -g typescript ts-node
@@ -283,19 +265,13 @@ ts-node --version
 
 ## Visual Studio Code
 
----
-
 ### Visual Studio Code 설치하기
-
----
 
 다운로드 페이지 : https://code.visualstudio.com/download
 
 react-weekend > Applications 아래에 vs code를 설치한다.
 
 ### VS Code 설정 변경하기
-
----
 
 설정 메뉴 단축키
 
@@ -307,9 +283,7 @@ react-weekend > Applications 아래에 vs code를 설치한다.
 
 - Font Familly 맨 앞에 [D2Coding](https://github.com/naver/d2codingfont) 추가 (D2Coding 폰트 다운로드해야 됨)
 
-### Prettier Extension 설치 및 설정
-
----
+## Prettier Extension 설치 및 설정
 
 - Vs Code 확장 검색창에서 [Prettier](https://prettier.io/)(Code Formatter)를 검색해서 설치한다.
 
@@ -319,9 +293,7 @@ react-weekend > Applications 아래에 vs code를 설치한다.
 
 - **Format On Paste**, **Format On Save** 체크하기
 
-### 프로젝트 생성하기
-
----
+## 프로젝트 생성하기
 
 1. 파일 > 폴더 열기 > react-weekend에 새 폴더 생성(Labs) > Labs 폴더 선택해서 열기
 
@@ -344,13 +316,9 @@ node .\ex01.js
 
 ## Javascript
 
----
-
 - [Javascript 수업 내용은 lab01 폴더 아래의 js 파일들을 확인하세요.](https://github.com/jihyeon-seong/react-weekend/tree/main/Labs/lab01)
 
 ### 더 알아볼만한 내용
-
----
 
 - 화살표 함수와 클로저
   - [JavaScript Arrow Functions and Closures](https://vmarchesin.medium.com/javascript-arrow-functions-and-closures-4e53aa30b774)
@@ -359,8 +327,6 @@ node .\ex01.js
   - [화살표 함수](https://poiemaweb.com/es6-arrow-function)
 
 ### 그 외 수업 관련 정보
-
----
 
 - 학원에서 준 책은 안 갖고 다녀도 됨. 참고서 정도로 생각하기
 
