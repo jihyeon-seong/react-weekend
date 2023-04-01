@@ -293,6 +293,8 @@ react-weekend > Applications 아래에 vs code를 설치한다.
 
 - **Format On Paste**, **Format On Save** 체크하기
 
+<img width="754" alt="Untitled" src="https://user-images.githubusercontent.com/119292125/229295974-382afe22-84d7-4e47-8371-f36726622875.png">
+
 ## 프로젝트 생성하기
 
 1. 파일 > 폴더 열기 > react-weekend에 새 폴더 생성(Labs) > Labs 폴더 선택해서 열기
@@ -300,6 +302,8 @@ react-weekend > Applications 아래에 vs code를 설치한다.
 2. **메뉴에서 보기 > 터미널 선택** 또는 **ctrl + `(백틱)** 으로 터미널 열기
 
 3. Labs > lab01 폴더 생성 > ex01.js 파일 생성
+
+<img width="308" alt="Untitled (1)" src="https://user-images.githubusercontent.com/119292125/229296045-076f65ec-8663-4077-b627-c500514d3575.png">
 
 ex01.js 파일 수정
 
