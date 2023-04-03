@@ -11,3 +11,8 @@
 - mail : jake.oh.lecture@gmail.com
 - github : https://github.com/JakeOh
   - 강의 repo : https://github.com/JakeOh/20230401_gnit_react
+
+## Repository 구조
+
+- Labs : 수업 관련 내용(실습 코드, 필기) 업로드
+- Book : 학원 교재로 받은 리액트를 다루는 기술 실습 코드 작성
