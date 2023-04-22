@@ -1,4 +1,6 @@
 import { Fragment } from 'react';
+// 컴포넌트에서 CSS 파일의 스타일을 적용하려면 CSS 파일을 임포트
+import './App.css';
 
 // 함수형 컴포넌트
 // return하는 JSX가 화면에 렌더링됨
@@ -76,6 +78,18 @@ function App() {
 
         {/* style 객체 변수를 이용하기 */}
         <span style={myStyle}>{name}</span>
+      </div>
+
+      {/* 
+        - https://react.dev/reference/react-dom/components/common#applying-css-styles 
+        - HTML 속성(attribute) 이름과 다른 경우 :
+          - class -> className
+          - for -> htmlFor
+      */}
+      <div className="my-style">
+        <p>Hello~!!!</p>
+        <label htmlFor="name">label</label>
+        <input id="name" />
       </div>
     </>
   );
