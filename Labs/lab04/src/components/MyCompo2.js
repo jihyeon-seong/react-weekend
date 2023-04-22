@@ -4,11 +4,16 @@ import PropTypes from 'prop-types';
 // 함수형 컴포넌트
 // props 의 기본값 설정, 타입 체크
 
+// Children
+// https://react.dev/reference/react/Children
+
 const MyCompo2 = props => {
   return (
     <div>
       <p>이름 : {props.name}</p>
       <p>나이 : {props.age}</p>
+
+      <div>{props.children}</div>
     </div>
   );
 };
@@ -25,7 +30,7 @@ MyCompo2.defaultProps = {
 // props 속성들의 데이터 타입을 검사하고, 선언된 타입과 다를 경우 브라우저의 콘솔 창에 경고 메세지를 출력
 MyCompo2.propTypes = {
   name: PropTypes.string,
-  age: PropTypes.number,
+  age: PropTypes.number.isRequired, // 필수 값으로 지정
 };
 
 export default MyCompo2;
