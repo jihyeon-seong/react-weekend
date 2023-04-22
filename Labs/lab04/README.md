@@ -113,3 +113,5 @@ app.js 하위에 자식 컴포넌트들을 생성
 npm i prop-types
 
 프로젝트 하위에서 npm install 해야함
+
+다음 주 : state, event handling

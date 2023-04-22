@@ -36,7 +36,11 @@ function App() {
         </span>
       </MyCompo3>
 
-      <MyCompo4 name="비둘기" age={123} />
+      <MyCompo4 age={123}>
+        <span>
+          <strong>구구구999</strong>
+        </span>
+      </MyCompo4>
     </>
   );
 }
