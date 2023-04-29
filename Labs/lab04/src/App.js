@@ -7,6 +7,8 @@ import MyCompo4 from './components/MyCompo4';
 import MyState from './components/MyState';
 import MyState2 from './components/MyState2';
 import MyEvent from './components/MyEvent';
+import MyEvent2 from './components/MyEvent2';
+import MyEvent3 from './components/MyEvent3';
 
 // properties, state
 // App에서 MyCompo 로 데이터를 넘기기 위해 property 사용
@@ -24,9 +26,14 @@ import MyEvent from './components/MyEvent';
 function App() {
   return (
     <>
-      <MyEvent />
+      <MyEvent3 />
 
       <div className="prevLecture">
+        <MyEvent2 />
+        <hr />
+        <MyEvent />
+        <hr />
+
         <MyState2 />
         <hr />
 
