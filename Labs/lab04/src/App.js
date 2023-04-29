@@ -3,6 +3,7 @@ import MyCompo from './components/MyCompo';
 import MyCompo2 from './components/MyCompo2';
 import MyCompo3 from './components/MyCompo3';
 import MyCompo4 from './components/MyCompo4';
+import { MyState } from './components/MyState';
 
 // properties, state
 // App에서 MyCompo 로 데이터를 넘기기 위해 property 사용
@@ -20,6 +21,9 @@ import MyCompo4 from './components/MyCompo4';
 function App() {
   return (
     <>
+      <MyState />
+      <hr />
+
       <MyCompo name="성지현" age={777} />
       <hr />
 
