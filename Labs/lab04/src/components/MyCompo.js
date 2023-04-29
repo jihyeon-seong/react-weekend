@@ -13,7 +13,7 @@ import React from 'react';
 
 // 함수형 컴포넌트에서 부모 컴포넌트가 전달한 props 를 저장하기 위한 파라미터를 선언
 const MyCompo = props => {
-  console.log(props);
+  // console.log(props);
   // 부모 컴포넌트에서 {attributeName : attributeValue, ...} 객체를 파라미터에 전달
   // https://react.dev/learn/passing-props-to-a-component
 

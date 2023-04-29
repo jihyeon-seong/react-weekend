@@ -1,10 +1,12 @@
 import React from 'react';
+import './App.css';
 import MyCompo from './components/MyCompo';
 import MyCompo2 from './components/MyCompo2';
 import MyCompo3 from './components/MyCompo3';
 import MyCompo4 from './components/MyCompo4';
 import MyState from './components/MyState';
 import MyState2 from './components/MyState2';
+import MyEvent from './components/MyEvent';
 
 // properties, state
 // App에서 MyCompo 로 데이터를 넘기기 위해 property 사용
@@ -22,33 +24,37 @@ import MyState2 from './components/MyState2';
 function App() {
   return (
     <>
-      <MyState2 />
-      <hr />
+      <MyEvent />
 
-      <MyState />
-      <hr />
+      <div className="prevLecture">
+        <MyState2 />
+        <hr />
 
-      <MyCompo name="성지현" age={777} />
-      <hr />
+        <MyState />
+        <hr />
 
-      <MyCompo2 age={99}>
-        <span>
-          <strong>React</strong>
-        </span>
-      </MyCompo2>
-      <hr />
+        <MyCompo name="성지현" age={777} />
+        <hr />
 
-      <MyCompo3 name="MyComponent3" age={1010}>
-        <span>
-          <strong>My Component 3!!!</strong>
-        </span>
-      </MyCompo3>
+        <MyCompo2 age={99}>
+          <span>
+            <strong>React</strong>
+          </span>
+        </MyCompo2>
+        <hr />
 
-      <MyCompo4 age={123}>
-        <span>
-          <strong>구구구999</strong>
-        </span>
-      </MyCompo4>
+        <MyCompo3 name="MyComponent3" age={1010}>
+          <span>
+            <strong>My Component 3!!!</strong>
+          </span>
+        </MyCompo3>
+
+        <MyCompo4 age={123}>
+          <span>
+            <strong>구구구999</strong>
+          </span>
+        </MyCompo4>
+      </div>
     </>
   );
 }
