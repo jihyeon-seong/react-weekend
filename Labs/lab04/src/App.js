@@ -3,7 +3,8 @@ import MyCompo from './components/MyCompo';
 import MyCompo2 from './components/MyCompo2';
 import MyCompo3 from './components/MyCompo3';
 import MyCompo4 from './components/MyCompo4';
-import { MyState } from './components/MyState';
+import MyState from './components/MyState';
+import MyState2 from './components/MyState2';
 
 // properties, state
 // App에서 MyCompo 로 데이터를 넘기기 위해 property 사용
@@ -21,6 +22,9 @@ import { MyState } from './components/MyState';
 function App() {
   return (
     <>
+      <MyState2 />
+      <hr />
+
       <MyState />
       <hr />
 
