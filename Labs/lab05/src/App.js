@@ -1,5 +1,6 @@
 import './App.css';
 import IterationExample from './IterationExample';
+import IterationExample2 from './IterationExample2';
 
 function App() {
   // const items = ['React', 'Vue.js', 'Angular.js', 'jQuery'];
@@ -12,7 +13,11 @@ function App() {
 
   return (
     <>
-      <IterationExample items={items} />
+      <IterationExample2 items={items} />
+
+      <div style={{ display: 'none' }}>
+        <IterationExample items={items} />
+      </div>
     </>
   );
 }
