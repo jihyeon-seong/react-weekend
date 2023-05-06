@@ -3,15 +3,18 @@ import { Component } from 'react';
 // 생명주기 메서드는 클래스 컴포넌트에서만 사용 가능.
 // Component 클래스에서 상속받아서 재정의하는 메서드.
 class LifeEx extends Component {
-  state = {
-    color: null,
-  };
-
   /**
    * - `state` 초깃값 할당.
    */
   constructor(props) {
     super(props); // 부모 클래스 Component의 생성자를 호출.
+
+    this.state = {
+      color: props.color,
+      number: 0,
+    };
+
+    this.increaseNumber = this.increaseNumber.bind(this);
 
     console.log('constructor():', props.color);
   }
@@ -22,8 +25,16 @@ class LifeEx extends Component {
    */
   static getDerivedStateFromProps(nextProps, prevState) {
     console.log('getDerivedStateFromProps()');
-    console.log(' nextProps:', nextProps);
-    console.log(' prevState:', prevState);
+    // console.log(' nextProps:', nextProps);
+    // console.log(' prevState:', prevState);
+
+    // return 하면 return 값은 setState 함수의 argument로 전달
+    if (nextProps.color !== prevState.color) {
+      console.log(
+        `nextProps.color=${nextProps.color}, prevState.color=${prevState.color}`,
+      );
+      return { color: nextProps.color };
+    }
 
     return null;
   }
@@ -42,10 +53,12 @@ class LifeEx extends Component {
    */
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate()');
-    console.log(' nextProps:', nextProps);
-    console.log(' nextState:', nextState);
+    // console.log(' nextProps:', nextProps);
+    // console.log(' nextState:', nextState);
 
-    return true;
+    // return false; 시 render 호출 X
+    // return true;
+    return nextState.number !== 3; // number 3만 update 안 됨
   }
 
   /**
@@ -54,9 +67,12 @@ class LifeEx extends Component {
    * - 주로 업데이트하기 직전의 값을 참고할 일이 있을 때 활용.
    */
   getSnapshotBeforeUpdate(prevPorps, prevState) {
-    console.log('getSnapshotBeforeUpdate()');
+    console.log(`getSnapshotBeforeUpdate()`);
+    console.log(`prevPorps=`, prevPorps);
+    console.log(`prevState=`, prevState);
 
-    return null;
+    // return값은 componentDidUpdate 메서드의 snapShot 파라미터에 전달됨
+    return `test`;
   }
 
   /**
@@ -67,6 +83,28 @@ class LifeEx extends Component {
    */
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log('componentDidUpdate()');
+    console.log(`prevProps=`, prevProps);
+    console.log(`prevState=`, prevState);
+    console.log(`snapshot=`, snapshot);
+  }
+
+  /**
+   * 소스코드에 변동이 생겼을 때 React.StrictMode 사용 시 확인 가능
+   */
+  componentWillUnmount() {
+    console.log(`componentWillUnmount()`);
+  }
+
+  /**
+   * this.setState();
+   * -> 일반 이벤트 핸들러 함수에서 this의 의미는 이벤트가 발생한 html 엘리먼트
+   * html 엘리먼트는 setState 리액트 컴포넌트의 메서드를 가지고 있지 못함
+   *
+   * 화살표 함수에서 this의 의미는 화살표 함수를 정의하고 있는 컴포넌트 객체
+   */
+  increaseNumber() {
+    console.log(`click event handler`);
+    this.setState(({ number }) => ({ number: number + 1 }));
   }
 
   /**
@@ -77,8 +115,20 @@ class LifeEx extends Component {
    */
   render() {
     console.log('render()');
+    const style = { color: this.props.color };
 
-    return <h2 style={{ color: this.props.color }}>Example</h2>;
+    return (
+      <>
+        <h2>Example</h2>
+        <div
+          className="circle"
+          style={{ backgroundColor: this.state.color }}
+        ></div>
+        <h3 style={style}>color : {this.state.color}</h3>
+        <h3>number : {this.state.number}</h3>
+        <button onClick={this.increaseNumber}>plus</button>
+      </>
+    );
   }
 }
 
