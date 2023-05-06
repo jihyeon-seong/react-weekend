@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import LifeEx from './LifeEx';
+import LifeEx2 from './LifeEx2';
 
 function App() {
   const [color, setColor] = useState('#000000');
@@ -15,9 +16,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Lifecycle Methods</h1>
-      <button onClick={makeRandomColor}>임의 색상</button>
-      <LifeEx color={color} />
+      <LifeEx2 />
+      {/* 
+      <div>
+        <h1>Lifecycle Methods</h1>
+        <button onClick={makeRandomColor}>임의 색상</button>
+        <LifeEx color={color} />
+      </div> 
+      */}
     </div>
   );
 }
