@@ -1,7 +1,5 @@
-// 할 일들의 배열을 관리. TodoListItem 컴포넌트들을 보여줌
-
 import TodoListItem from './TodoListItem';
-import './TodoList.scss';
+import '../public/scss/TodoList.scss';
 
 export default function TodoList({ todos, onRemove, onToggle }) {
   return (

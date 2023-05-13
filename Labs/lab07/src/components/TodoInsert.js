@@ -1,8 +1,6 @@
-// 새 할일을 추가하는 컴포넌트. input의 값을 state로 관리
-
 import { useCallback, useState } from 'react';
 import { MdAdd } from 'react-icons/md';
-import './TodoInsert.scss';
+import '../public/scss/TodoInsert.scss';
 
 export default function TodoInsert({ onInsert }) {
   const [value, setValue] = useState('');
@@ -15,8 +13,10 @@ export default function TodoInsert({ onInsert }) {
     (e) => {
       e.preventDefault();
 
-      onInsert(value);
-      setValue('');
+      if (value !== '') {
+        onInsert(value);
+        setValue('');
+      }
     },
     [onInsert, value],
   );
