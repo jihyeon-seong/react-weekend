@@ -1,10 +1,12 @@
 import '../resources/scss/TodoTemplate.scss';
 
-export default function TodoTemplate({ children }) {
+export default function TodoTemplate({ now, children }) {
   return (
     <div className="TodoTemplate">
-      <img src="/images/mansun.png" alt="the cutest cat mansun" />
-      <div className="app-title">일정 관리</div>
+      <div className="header-image"></div>
+      <div className="app-title">
+        {now.toLocaleDateString()} {now.toLocaleTimeString()}
+      </div>
       <div className="content">{children}</div>
     </div>
   );
