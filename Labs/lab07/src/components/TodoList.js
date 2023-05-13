@@ -1,5 +1,5 @@
 import TodoListItem from './TodoListItem';
-import '../public/scss/TodoList.scss';
+import '../resources/scss/TodoList.scss';
 
 export default function TodoList({ todos, onRemove, onToggle }) {
   return (
