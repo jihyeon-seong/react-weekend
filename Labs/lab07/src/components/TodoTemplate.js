@@ -1,8 +1,10 @@
+/**
+ * Display App Title Component
+ * JSX 하위 요소들
+ */
+
 import React from 'react';
 import './TodoTemplate.scss';
-
-// Display App Title Component
-// JSX 하위 요소들
 
 export default function TodoTemplate({ children }) {
   return (
