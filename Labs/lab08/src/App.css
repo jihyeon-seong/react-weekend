@@ -1,0 +1,12 @@
+.App {
+  margin: 0 auto;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App div img {
+  width: 100%;
+}
