@@ -1,11 +1,13 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Movie from './components/Movie';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
+  /**
   useEffect(() => {
     axios
       // GET 요청 보냄
@@ -29,17 +31,47 @@ function App() {
         // console.log('finally');
       });
   }, []);
+ */
+
+  useEffect(() => {
+    // async-await 를 사용한 axios 사용법
+    const fetchData = async () => {
+      // async : 함수 body 안에 비동기로 동작하는 코드가 있다는 걸 선언
+
+      try {
+        const response = await axios.get(
+          'https://yts-proxy.now.sh/list_movies.json?sort_by=rating',
+        );
+
+        setLoading(false);
+        setMovies(response.data.data.movies);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="App">
       <h1>Movie App</h1>
-      <div>{loading ? 'Loading...' : 'Ready!'}</div>
-      {movies.map((movie) => (
-        <div key={movie.id}>
-          <img src={movie.background_image_original} alt={movie.title}></img>
-          <p>{movie.title}</p>
-        </div>
-      ))}
+      <div className="movie-wrap">
+        {loading
+          ? 'Loading...'
+          : movies.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                rating={movie.rating}
+                genres={movie.genres}
+                summary={movie.summary}
+                background_image_original={movie.background_image_original}
+              />
+            ))}
+      </div>
     </div>
   );
 }
