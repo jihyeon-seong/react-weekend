@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Movie({
   id,
@@ -28,6 +28,9 @@ export default function Movie({
           ))}
         </ul>
         <p>{summary.slice(0, 200)}</p>
+        <Link to={`/movies/${id}`} state={{ id }} className="more">
+          More
+        </Link>
       </div>
     </article>
   );

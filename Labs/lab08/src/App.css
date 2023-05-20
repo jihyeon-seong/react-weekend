@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.loading-message {
+  grid-column: span 2;
+}
+
 .movie-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -22,6 +26,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: white;
   transform: translate(-50%, -50%);
@@ -35,6 +41,7 @@
 
 .App .movie .movie-info p {
   text-overflow: ellipsis;
+  word-break: break-all;
   height: 70%;
   position: relative;
   width: 100%;
@@ -42,17 +49,37 @@
 }
 
 ul {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
-  gap: 0.2rem;
   overflow: hidden;
 }
 
 ul li {
   list-style: none;
-  border: 1px solid #fff;
   padding: 0.2rem 0.8rem;
+}
+
+ul li:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+
+.About {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.more {
+  padding: 0.4rem 0;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: color 0.3s ease-in;
+  text-decoration: none;
+}
+
+.more:hover {
+  background-color: #fff;
+  color: #223;
 }
