@@ -4,7 +4,7 @@ import * as Actions from '../actions/PostsActions';
 const initialState = {
   posts: [],
   loading: false,
-  hasError: false,
+  hasErrors: false,
 };
 
 // reducer
@@ -21,14 +21,14 @@ const postReducer = (state = initialState, action) => {
       return {
         posts: action.payload,
         loading: false,
-        hasError: false,
+        hasErrors: false,
       };
 
     case Actions.GET_POSTS_FAILURE:
       return {
         ...state,
         loading: false,
-        hasError: true,
+        hasErrors: true,
       };
 
     default:

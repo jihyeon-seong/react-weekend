@@ -20,7 +20,9 @@ const PostsPage = ({ dispatch, posts, loading, hasErrors }) => {
       return <p>Error...</p>;
     }
 
-    return posts.map((post) => <Post key={post.id} post={post} />);
+    return posts
+      .sort(() => Math.random() - 0.5)
+      .map((post) => <Post key={post.id} post={post} />);
   };
 
   return (
