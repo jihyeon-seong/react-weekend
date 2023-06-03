@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import PostsPage from './pages/PostsPage';
 
 const App = () => {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {}, []);
-
   return (
-    <div>
-      <h1>Hello Redux</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/posts" element={<PostsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
