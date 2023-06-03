@@ -1,7 +1,15 @@
-import './App.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-function App() {
-  return <div className="App"></div>;
-}
+const App = () => {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {}, []);
+
+  return (
+    <div>
+      <h1>Hello Redux</h1>
+    </div>
+  );
+};
 
 export default App;
