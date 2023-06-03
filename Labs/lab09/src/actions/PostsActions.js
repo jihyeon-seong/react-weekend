@@ -26,7 +26,7 @@ export const fetchPosts = () => {
         'https://jsonplaceholder.typicode.com/posts',
       );
 
-      const posts = reponse.data;
+      const posts = reponse.data.sort(() => Math.random() - 0.5);
 
       // 목록 요청 성공 액션을 payload와 함께 store reducer에 전달
       dispatch(getPostsSuccess(posts));
