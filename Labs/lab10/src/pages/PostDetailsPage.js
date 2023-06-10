@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchPostDetails } from '../slices/PostDetailsSlice';
 import PostDetails from '../components/PostDetails';
-import Comments from '../components/Comments';
 import { fetchComments } from '../slices/Comments';
+import Comment from '../components/Comment';
 
 export default function PostDetailsPage() {
   const { id } = useParams();
@@ -42,7 +42,16 @@ export default function PostDetailsPage() {
       return <h2>Comments Error!</h2>;
     }
 
-    return <Comments comments={comments} />;
+    return (
+      comments.length > 0 && (
+        <section className="comments">
+          <h3>Comments</h3>
+          {comments.map((comment) => (
+            <Comment key={comment.id} comment={comment} />
+          ))}
+        </section>
+      )
+    );
   };
 
   return (

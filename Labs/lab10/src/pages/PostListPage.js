@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostList } from '../slices/PostListSlice';
 import PostItem from '../components/PostItem';
+import PostWriteForm from '../components/PostWriteForm';
 
 export default function PostListPage() {
   // 리덕스 스토어로 액션을 전달할 수 있는 dispatch 함수를 리턴
@@ -29,6 +30,7 @@ export default function PostListPage() {
   return (
     <section>
       <h1>Post List Page</h1>
+      <PostWriteForm />
       {renderPostList()}
     </section>
   );
