@@ -1,0 +1,26 @@
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+a {
+  color: #223;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 768px;
+  text-align: center;
+}
