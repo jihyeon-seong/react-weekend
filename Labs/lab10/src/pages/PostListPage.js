@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostList } from '../slices/PostListSlice';
+import PostItem from '../components/PostItem';
 
 export default function PostListPage() {
   // 리덕스 스토어로 액션을 전달할 수 있는 dispatch 함수를 리턴
@@ -13,12 +14,22 @@ export default function PostListPage() {
     dispatch(fetchPostList());
   }, [dispatch]);
 
+  const renderPostList = () => {
+    if (loading) {
+      return <h2>Loading...</h2>;
+    }
+
+    if (hasError) {
+      return <h2>Error!</h2>;
+    }
+
+    return posts.map((post) => <PostItem key={post.id} post={post} />);
+  };
+
   return (
     <section>
       <h1>Post List Page</h1>
-      {posts.map((post, index) => (
-        <li key={post.id}>{post.title}</li>
-      ))}
+      {renderPostList()}
     </section>
   );
 }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import PostListReducer from './slices/PostListSlice';
+import PostDetailsReducer from './slices/PostDetailsSlice';
 import App from './App';
 import './index.css';
 
@@ -10,6 +11,7 @@ import './index.css';
 const store = configureStore({
   reducer: {
     postList: PostListReducer,
+    postDetails: PostDetailsReducer,
   },
 });
 
