@@ -89,7 +89,7 @@ article a:hover {
 
 .post-details address {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 0.4rem;
   text-align: center;
 }

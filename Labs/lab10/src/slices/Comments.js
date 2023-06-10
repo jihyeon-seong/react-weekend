@@ -29,13 +29,13 @@ const CommentsSlice = createSlice({
 export const { getCommentsStart, getCommentsSuccess, getCommentsFailure } =
   CommentsSlice.actions;
 
-export const fetchComments = (id) => {
+export const fetchComments = (postId) => {
   return async (dispatch) => {
     dispatch(getCommentsStart());
 
     try {
       const response = await axios.get(
-        `https://jsonplaceholder.typicode.com/posts/${id}/comments`,
+        `https://jsonplaceholder.typicode.com/posts/${postId}/comments`,
       );
 
       dispatch(getCommentsSuccess(response.data));

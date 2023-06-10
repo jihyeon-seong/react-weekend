@@ -10,7 +10,11 @@ export default function PostDetailsPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { post, loading, hasError } = useSelector((state) => state.postDetails);
-  const { comments } = useSelector((state) => state.comments);
+  const {
+    comments,
+    loading: commentsLoading,
+    hasError: commentsHasError,
+  } = useSelector((state) => state.comments);
 
   useEffect(() => {
     dispatch(fetchPostDetails(id));
@@ -26,18 +30,26 @@ export default function PostDetailsPage() {
       return <h2>Error!</h2>;
     }
 
-    return (
-      <>
-        <PostDetails post={post} />
-        <Comments comments={comments} />
-      </>
-    );
+    return <PostDetails post={post} />;
+  };
+
+  const renderComments = () => {
+    if (commentsLoading) {
+      return <h2>Comments Loading...</h2>;
+    }
+
+    if (commentsHasError) {
+      return <h2>Comments Error!</h2>;
+    }
+
+    return <Comments comments={comments} />;
   };
 
   return (
     <section>
       <h1>Post Details Page - {id}</h1>
       {renderPostDetatils()}
+      {renderComments()}
     </section>
   );
 }
