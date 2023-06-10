@@ -5,7 +5,9 @@ export default function DashboardPage() {
     <section>
       <h1>Dashboard</h1>
       <p>Main Page</p>
-      <Link to="/posts">Post List</Link>
+      <Link to="/posts" className="button">
+        Post List
+      </Link>
     </section>
   );
 }

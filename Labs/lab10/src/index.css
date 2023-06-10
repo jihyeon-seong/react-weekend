@@ -14,13 +14,33 @@ nav {
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
   border-bottom: 1px solid #eee;
 }
 
+nav a {
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #223;
+  color: #fff;
+}
 section {
   margin: 0 auto;
   max-width: 768px;
   text-align: center;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid #223;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #223;
+  color: #fff;
 }
