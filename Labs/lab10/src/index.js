@@ -6,12 +6,14 @@ import PostListReducer from './slices/PostListSlice';
 import PostDetailsReducer from './slices/PostDetailsSlice';
 import App from './App';
 import './index.css';
+import CommentsSlice from './slices/Comments';
 
 // create redux store object with RTK
 const store = configureStore({
   reducer: {
     postList: PostListReducer,
     postDetails: PostDetailsReducer,
+    comments: CommentsSlice,
   },
 });
 
