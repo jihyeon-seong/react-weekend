@@ -12,7 +12,6 @@ const PostDetails = ({ post }) => {
               backgroundImage: `url(${post.profileImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              border: '1px solid #eee',
               borderRadius: '100%',
               boxShadow: '2px 2px 10px rgba(7,7,7,.3)',
               width: 64,
