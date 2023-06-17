@@ -7,3 +7,18 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+
+button {
+  background-color: transparent;
+  border: 1px solid #223;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(77, 88, 77, 0.3);
+}
+
+.text-align-left {
+  text-align: left;
+}

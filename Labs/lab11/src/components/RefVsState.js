@@ -5,8 +5,11 @@ export default function RefVsState() {
   const countRef = useRef(0);
 
   const handleClickState = () => {
-    setCount(count + 1);
+    setCount(count + 1); // setCount((prev) => prev + 1);
     // state가 변경되면 화면이 갱신(re-render)됨
+
+    // 함수를 저장하는 state를 set 할 때는 콜백 함수를 써야 함
+    // ex. setCount((prev) => () => {})
   };
 
   const handleClickRef = () => {
