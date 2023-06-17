@@ -32,6 +32,41 @@ input {
   margin-top: 2rem;
 }
 
+.margin-bottom-2 {
+  margin-bottom: 2rem;
+}
+
 .display-none {
   display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.scroll-nav button {
+  padding: 1rem 1.3rem;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.active {
+  background-color: rgba(0, 100, 150, 0.3);
 }
