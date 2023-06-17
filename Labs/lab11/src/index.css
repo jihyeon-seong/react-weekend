@@ -19,6 +19,19 @@ button:hover {
   background-color: rgba(77, 88, 77, 0.3);
 }
 
+input {
+  border: 1px solid #223;
+  padding: 1rem 2rem;
+}
+
 .text-align-left {
   text-align: left;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+
+.display-none {
+  display: none;
 }
